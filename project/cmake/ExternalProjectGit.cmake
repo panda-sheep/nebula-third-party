@@ -39,6 +39,8 @@ macro(ExternalProject_Add_Git proj_name)
 
     set(args ${proj_name})
     set(gitClone FALSE)
+
+    message(STATUS "use rocksdb cloud ${source_dir}")
     if (EPAG_ARCHIVE_FILE AND EPAG_ARCHIVE_MD5)
         execute_process(
             COMMAND echo "${EPAG_ARCHIVE_MD5}  ${EPAG_ARCHIVE_FILE}"
